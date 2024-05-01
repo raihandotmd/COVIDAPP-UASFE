@@ -1,0 +1,16 @@
+.navbar {
+  background: var(--primary-color);
+  color: var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2.5rem;
+}
+.navbar__list {
+  list-style: none;
+  display: flex;
+}
+
+.navbar__item {
+  margin: 0 1rem;
+}
