@@ -1,0 +1,32 @@
+.hero {
+  display: flex;
+  padding: 3rem;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero__title {
+  font-weight: var(--medium-weight);
+}
+
+.hero__subtitle {
+  color: var(--sec-color);
+  font-weight: var(--regular-weight);
+}
+
+.hero__text {
+  width: 22rem;
+  margin: 1rem 0 2rem 0;
+  color: var(--gray-color);
+  font-weight: var(--light-weight);
+}
+
+.hero__button {
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
