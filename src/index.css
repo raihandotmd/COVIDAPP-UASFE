@@ -5,8 +5,11 @@
   --sec-color: #fca311;
   --danger-color: #ef476f;
   --black-color: #14213d;
-  --gray-color: ##64748b;
+  --gray-color: #64748b;
   --white-color: #ffffff;
+  --light-weight: 200;
+  --regular-weight: 300;
+  --bold-weight: 700;
 }
 * {
   margin: 0;

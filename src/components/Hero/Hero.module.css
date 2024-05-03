@@ -12,14 +12,14 @@
 
 .hero__subtitle {
   color: var(--sec-color);
-  font-weight: 300;
+  font-weight: var(--regular-weight);
 }
 
 .hero__text {
   width: 22rem;
   margin: 1rem 0 2rem 0;
   color: var(--gray-color);
-  font-weight: var(--regular-weight);
+  font-weight: var(--light-weight);
 }
 
 .hero__button {
