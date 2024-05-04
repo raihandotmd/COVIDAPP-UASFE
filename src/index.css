@@ -7,8 +7,10 @@
   --black-color: #14213d;
   --gray-color: #64748b;
   --white-color: #ffffff;
+  --bglight-color: #f8f9fa;
   --light-weight: 200;
   --regular-weight: 300;
+  --medium-weight: 500;
   --bold-weight: 700;
 }
 * {

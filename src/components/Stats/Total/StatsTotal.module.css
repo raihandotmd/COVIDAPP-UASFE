@@ -1,0 +1,25 @@
+.StatsTotal {
+  background-color: var(--bglight-color);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.StatsTotal__header {
+  margin-bottom: 2rem;
+}
+
+.StatsTotal__title {
+  font-weight: var(--medium-weight);
+}
+
+.StatsTotal__subtitle {
+  font-weight: var(--regular-weight);
+  color: var(--sec-color);
+}
+
+.StatsTotal__body {
+  display: flex;
+  gap: 1.5rem;
+}
