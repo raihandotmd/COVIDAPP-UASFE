@@ -1,3 +1,4 @@
+/* Default Screen */
 .StatsTotal {
   background-color: var(--bglight-color);
   padding: 3rem;
@@ -22,4 +23,14 @@
 .StatsTotal__body {
   display: flex;
   gap: 1.5rem;
+}
+
+/* Medium Screen */
+@media (max-width: 992px) {
+  .StatsTotal__body {
+    flex-direction: column;
+    width: 80%;
+    min-width: 320px;
+    text-align: center;
+  }
 }
