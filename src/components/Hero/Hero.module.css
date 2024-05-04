@@ -1,3 +1,4 @@
+/* Default Scren */
 .hero {
   display: flex;
   padding: 3rem;
@@ -29,4 +30,22 @@
   padding: 0.8rem 2rem;
   border-radius: 5px;
   cursor: pointer;
+}
+
+/* Medium Screen */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
