@@ -16,7 +16,9 @@ const ProvinceTableData: React.FC<ProvinceData> = (data) => {
 
   return (
     <tr>
-      <td>{no}</td>
+      <td>
+        <b>{no}</b>
+      </td>
       <td>{province}</td>
       <td>{positive}</td>
       <td>{recovered}</td>

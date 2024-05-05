@@ -23,6 +23,7 @@
   height: 300px;
   overflow-y: auto;
   overflow-x: auto;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 25%);
 }
 
 table.StatsProvince__table,
