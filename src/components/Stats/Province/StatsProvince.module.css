@@ -1,0 +1,53 @@
+.StatsProvince {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.StatsProvince__header {
+  margin-bottom: 2rem;
+}
+
+.StatsProvince__title {
+  font-weight: var(--medium-weight);
+}
+
+.StatsProvince__subtitle {
+  color: var(--sec-color);
+}
+
+.StatsProvince__tableContainer {
+  height: 300px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+table.StatsProvince__table,
+table.StatsProvince__table th,
+table.StatsProvince__table td {
+  border-collapse: collapse;
+}
+table.StatsProvince__table th {
+  border: 2px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-collapse: collapse;
+}
+
+table.StatsProvince__table th,
+table.StatsProvince__table td {
+  padding: 1rem 1.5rem;
+}
+table.StatsProvince__table td {
+  color: var(--gray-color);
+  border: 1.5px solid;
+}
+
+@media (max-width: 992px) {
+  .StatsProvince__tableContainer {
+    width: 75%;
+  }
+}
