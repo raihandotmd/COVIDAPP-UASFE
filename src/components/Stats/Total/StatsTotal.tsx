@@ -11,7 +11,7 @@ const StatsTotal = () => {
         </p>
       </div>
       <div className={styles.StatsTotal__body}>
-        <StatsCard status="Confirmed" stats={608.646} />
+        <StatsCard status="Confirmed" colorStats="gray-color" stats={608.646} />
         <StatsCard status="Recovered" colorStats="sec-color" stats={90.023} />
         <StatsCard status="Death" colorStats="danger-color" stats={5.023} />
       </div>
