@@ -4,7 +4,9 @@
   padding: 3rem;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 10rem;
+  height: 90vh;
+  z-index: 10;
 }
 
 .hero__title {
@@ -17,7 +19,7 @@
 }
 
 .hero__text {
-  width: 22rem;
+  width: 30rem;
   margin: 1rem 0 2rem 0;
   color: var(--gray-color);
   font-weight: var(--light-weight);
