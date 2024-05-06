@@ -34,20 +34,40 @@
   cursor: pointer;
 }
 
+.hero__image img {
+  width: 90%;
+}
+
+.hero__image {
+  width: 800px;
+}
+
+/* Small Screen */
+@media (max-width: 768px) {
+  .hero__text {
+    width: 20rem;
+  }
+}
+
 /* Medium Screen */
 @media (max-width: 992px) {
   .hero {
     flex-direction: column-reverse;
     text-align: center;
+    gap: 2rem;
   }
   .hero__content {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   .hero__body {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .hero__image {
+    width: 350px;
   }
 }

@@ -38,6 +38,10 @@
   cursor: pointer;
 }
 
+.form__image img {
+  width: 100%;
+}
+
 @media (max-width: 992px) {
   .form__image {
     display: none;

@@ -1,3 +1,4 @@
+import heroImage from "../../assets/images/hero.png";
 import styles from "./Hero.module.css";
 
 const Hero = () => {
@@ -18,7 +19,7 @@ const Hero = () => {
         </div>
       </div>
       <div className={styles.hero__image}>
-        <h1>[IMAGE ILLUST.]</h1>
+        <img src={heroImage} alt="Hero IMG Illustration" />
       </div>
     </div>
   );

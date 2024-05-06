@@ -1,10 +1,11 @@
 import styles from "./Form.module.css";
+import formImage from "../../assets/images/form.png";
 
 const Form = () => {
   return (
     <div className={styles.form}>
       <div className={styles.form__image}>
-        <h1>[IMAGE ILLUST.]</h1>
+        <img src={formImage} alt="Form IMG Illustration" />
       </div>
       <div className={styles.form__content}>
         <h1 className={styles.form__title}>Form Covid</h1>
