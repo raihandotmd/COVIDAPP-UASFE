@@ -2,6 +2,7 @@ import styles from "./StatsTotal.module.css";
 import StatsCard from "../Card/StatsCard";
 import { StatsData } from "../../../types/data.ts";
 import data from "../../../utils/constants/indonesia.js";
+import { nanoid } from "nanoid";
 
 type typeStatus = "Positif" | "Sembuh" | "Meninggal";
 function checkStatus(status: typeStatus) {
@@ -17,6 +18,7 @@ function checkStatus(status: typeStatus) {
   }
 }
 
+// Untuk format nomor agar memiliki decimal
 function formatNumber(number: number): string {
   // Use toLocaleString for formatting
   return number.toLocaleString("en-US", {
@@ -38,6 +40,7 @@ const StatsTotal = () => {
         <div className={styles.StatsTotal__body}>
           {statsData.indonesia.map((data) => (
             <StatsCard
+              key={nanoid(1)}
               status={data.status}
               colorStats={checkStatus(data.status as typeStatus)}
               stats={formatNumber(data.total)}

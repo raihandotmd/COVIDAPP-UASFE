@@ -1,24 +1,11 @@
-import styles from "./StatsProvince.module.css";
+import styles from "./StatsProvinces.module.css";
 import ProvinceTableData from "./TableData/ProvinceTableData";
+import { StatsDataProvinces } from "../../../types/data";
+import data from "../../../utils/constants/provinces";
+import { nanoid } from "nanoid";
 
-const StatsProvince = () => {
-  const fakedata1 = {
-    no: 1,
-    province: "jakarta",
-    positive: 10,
-    treated: 20,
-    death: 8,
-    recovered: 4,
-  };
-  const fakedata2 = {
-    no: 2,
-    province: "aceh",
-    positive: 30,
-    treated: 25,
-    death: 8,
-    recovered: 4,
-  };
-
+const StatsProvinces = () => {
+  const statsDataProvince: StatsDataProvinces = data as StatsDataProvinces;
   return (
     <div className={styles.StatsProvince}>
       <div className={styles.StatsProvince__header}>
@@ -40,11 +27,9 @@ const StatsProvince = () => {
             </tr>
           </thead>
           <tbody>
-            <ProvinceTableData {...fakedata1} />
-            <ProvinceTableData {...fakedata2} />
-            <ProvinceTableData {...fakedata2} />
-            <ProvinceTableData {...fakedata2} />
-            <ProvinceTableData {...fakedata2} />
+            {statsDataProvince.provinces.map((data, index) => (
+              <ProvinceTableData key={nanoid(5)} no={index + 1} {...data} />
+            ))}
           </tbody>
         </table>
       </div>
@@ -52,4 +37,4 @@ const StatsProvince = () => {
   );
 };
 
-export default StatsProvince;
+export default StatsProvinces;
