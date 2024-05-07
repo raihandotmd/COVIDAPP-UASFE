@@ -6,7 +6,7 @@ const Footer = () => {
     <nav className={styles.footer}>
       <div>
         <h3 className={styles.footer__brand}>Covid ID</h3>
-        <p className={styles.footer__credit}>Developed by raihandotmd</p>
+        <p className={styles.footer__credit}>Developed by @raihandotmd</p>
       </div>
       <ul className={styles.footer__list}>
         <li className={styles.footer__item}>
