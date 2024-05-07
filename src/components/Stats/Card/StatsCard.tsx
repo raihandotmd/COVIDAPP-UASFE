@@ -3,7 +3,7 @@ import styles from "./StatsCard.module.css";
 type StyleStatsCard = {
   status: string;
   colorStats?: string;
-  stats: number;
+  stats: string;
 };
 
 const StatsCard = ({ status, colorStats, stats }: StyleStatsCard) => {
