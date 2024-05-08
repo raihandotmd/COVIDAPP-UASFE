@@ -29,7 +29,7 @@ function formatNumber(number: number): string {
 const StatsTotal = () => {
   const statsData: StatsData = data as StatsData;
   return (
-    <div className={styles.StatsTotal}>
+    <div id="indonesia" className={styles.StatsTotal}>
       <div className={styles.StatsTotal__container}>
         <div className={styles.StatsTotal__header}>
           <h1 className={styles.StatsTotal__title}>Indonesia</h1>

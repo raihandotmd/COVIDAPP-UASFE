@@ -6,6 +6,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 2.5rem;
+
+  position: sticky;
+  top: 0;
+  scroll-behavior: smooth;
 }
 .navbar__list {
   list-style: none;

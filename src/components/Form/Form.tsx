@@ -34,7 +34,7 @@ const Form = () => {
 
     const updatedProvinces = dataCovid.provinces.map(
       (province: DataProvince) => {
-        if (province.kota === selectedKotaValue) {
+        if (province.kota === selectedKotaValue && parseInt(inputValue) > 0) {
           return {
             ...province,
             kasus: province.kasus + parseInt(inputValue, 10),
@@ -54,7 +54,7 @@ const Form = () => {
     console.log(dataCovid); // This will now show the updated data
   };
   return (
-    <div className={styles.form}>
+    <div id="form" className={styles.form}>
       <div className={styles.form__image}>
         <img src={formImage} alt="Form IMG Illustration" />
       </div>

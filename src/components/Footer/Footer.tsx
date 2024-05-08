@@ -10,13 +10,13 @@ const Footer = () => {
       </div>
       <ul className={styles.footer__list}>
         <li className={styles.footer__item}>
-          <a href="#">
+          <a href="https://github.com/raihandotmd" target="_blank">
             <FaGithub />
             GitHub
           </a>
         </li>
         <li className={styles.footer__item}>
-          <a href="#">
+          <a href="www.linkedin.com/in/raihandotmd" target="_blank">
             <FaLinkedin />
             LinkedIn
           </a>

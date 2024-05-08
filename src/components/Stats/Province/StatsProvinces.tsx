@@ -7,7 +7,7 @@ import { DataProvince } from "../../../types/data";
 const StatsProvinces = () => {
   const { dataCovid, setDataCovid } = useCovidDataCtx();
   return (
-    <div className={styles.StatsProvince}>
+    <div id="provinces" className={styles.StatsProvince}>
       <div className={styles.StatsProvince__header}>
         <h1 className={styles.StatsProvince__title}>Provinsi</h1>
         <p className={styles.StatsProvince__subtitle}>
