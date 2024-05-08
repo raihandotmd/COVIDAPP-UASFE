@@ -1,11 +1,11 @@
 import styles from "./StatsProvinces.module.css";
 import ProvinceTableData from "./TableData/ProvinceTableData";
-import { StatsDataProvinces } from "../../../types/data";
-import data from "../../../utils/constants/provinces";
 import { nanoid } from "nanoid";
+import { useCovidDataCtx } from "../../../contexts/DataCovidProvider";
+import { DataProvince } from "../../../types/data";
 
 const StatsProvinces = () => {
-  const statsDataProvince: StatsDataProvinces = data as StatsDataProvinces;
+  const { dataCovid, setDataCovid } = useCovidDataCtx();
   return (
     <div className={styles.StatsProvince}>
       <div className={styles.StatsProvince__header}>
@@ -20,14 +20,14 @@ const StatsProvinces = () => {
             <tr className={styles.StatsProvince__tableth}>
               <th>No</th>
               <th>Provinsi</th>
-              <th>Positif</th>
+              <th>Kasus</th>
               <th>Sembuh</th>
               <th>Dirawat</th>
               <th>Meninggal</th>
             </tr>
           </thead>
           <tbody>
-            {statsDataProvince.provinces.map((data, index) => (
+            {dataCovid.provinces.map((data: DataProvince, index: number) => (
               <ProvinceTableData key={nanoid(5)} no={index + 1} {...data} />
             ))}
           </tbody>

@@ -11,7 +11,7 @@ export interface StatsData {
 
 export interface DataProvince {
   no?: number;
-  kota: string;
+  kota?: string;
   kasus: number;
   sembuh: number;
   meninggal: number;
@@ -21,5 +21,5 @@ export interface DataProvince {
 export interface StatsDataProvinces {
   last_update: string;
   total_province: number;
-  provinces: [DataProvince];
+  provinces: DataProvince[];
 }
