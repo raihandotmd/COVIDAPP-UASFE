@@ -22,7 +22,8 @@ tags:
 
 ### Project Showcase
 
-<img src="https://d9yrlck6nls9j.cloudfront.net/b4t86f%2Fpreview%2F57814877%2Fmain_large.gif?response-content-disposition=inline%3Bfilename%3D%22main_large.gif%22%3B&response-content-type=image%2Fgif&Expires=1715262714&Signature=VsVHBBJUzgN8Ijy6pCcAgEpvHmm16pwEdDGQDd3L~higxCxwfCyazxyWfIHtFQGaconFHxI4bZ3pAMJBWsK8BUphtT1ka2cJlIZRNHsryhpRuVFX8prqyKR4hJZJ0rs5F8EcoBiPkgEMLqUMPlD6bOe55Baoc44YwhnmFrSYXqsXtb0EjLn2~0n99CexXZsZyaFRGMeHHQjIWqicUu8IGx4BxfkpF5tGdZNFjTZuiXuMbd-FOiN1SPnf1pnB5C-ySlfNYNuwy3O6N3ZDAjzR0giXQV3FpW8j2qIEa0z6knZ2frGAD8xDqqrGSNiSiROmysgxstC4GVWdU7vrFYW89A__&Key-Pair-Id=APKAJT5WQLLEOADKLHBQ"  />
+![[Covid APP]](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmZleXRkZmJoaW0ycXZtMnZkam55dGdzMGpjYTQ2a3dpdW04aW5uYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4SQnlX2G2It4flfsRN/giphy.gif)
+
 ### Folder Structure
 
 ```bash
