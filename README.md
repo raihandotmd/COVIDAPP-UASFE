@@ -11,7 +11,7 @@ tags:
 
 # Project Overview
 
-- [Link Docs](docs/20240425 - UTS React Covid APP.md)
+- [Link Docs](https://github.com/raihandotmd/COVIDAPP-UTSFE/blob/master/docs/20240425%20-%20UTS%20React%20Covid%20APP.md)
 
 # Summarize
 
@@ -24,6 +24,7 @@ tags:
 
 <img src="https://d9yrlck6nls9j.cloudfront.net/b4t86f%2Fpreview%2F57814877%2Fmain_large.gif?response-content-disposition=inline%3Bfilename%3D%22main_large.gif%22%3B&response-content-type=image%2Fgif&Expires=1715262714&Signature=VsVHBBJUzgN8Ijy6pCcAgEpvHmm16pwEdDGQDd3L~higxCxwfCyazxyWfIHtFQGaconFHxI4bZ3pAMJBWsK8BUphtT1ka2cJlIZRNHsryhpRuVFX8prqyKR4hJZJ0rs5F8EcoBiPkgEMLqUMPlD6bOe55Baoc44YwhnmFrSYXqsXtb0EjLn2~0n99CexXZsZyaFRGMeHHQjIWqicUu8IGx4BxfkpF5tGdZNFjTZuiXuMbd-FOiN1SPnf1pnB5C-ySlfNYNuwy3O6N3ZDAjzR0giXQV3FpW8j2qIEa0z6knZ2frGAD8xDqqrGSNiSiROmysgxstC4GVWdU7vrFYW89A__&Key-Pair-Id=APKAJT5WQLLEOADKLHBQ"  />
 ### Folder Structure
+
 ```bash
 src
 ├── App.tsx
@@ -73,10 +74,10 @@ src
 
 ### Component Structure
 
-![[diagramComponent.png]]
+![image](https://github.com/raihandotmd/COVIDAPP-UTSFE/assets/114415754/33021e77-97da-43dd-817d-698da677a944)
 
 ### Global State
 
 In order to sync the form to the table, we can use useContext it's like a state and we can use it anywhere in the **global**, and also we have to wrap the component with the Provider in order for it to re-render.
-![[useContext.png]]
+![image](https://github.com/raihandotmd/COVIDAPP-UTSFE/assets/114415754/eed6aa47-aa70-4534-9af0-be89809e0d20)
 
