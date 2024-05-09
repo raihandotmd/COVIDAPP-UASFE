@@ -79,6 +79,6 @@ src
 
 ### Global State
 
-In order to sync the form to the table, we can use useContext it's like a state and we can use it anywhere in the **global**, and also we have to wrap the component with the Provider in order for it to re-render.
+In order to sync the form to the table, we can use **useContext()**, with it we can use state but **globally**, and also we have to wrap the component with the Provider in order for it to re-render.
 ![image](https://github.com/raihandotmd/COVIDAPP-UTSFE/assets/114415754/eed6aa47-aa70-4534-9af0-be89809e0d20)
 
