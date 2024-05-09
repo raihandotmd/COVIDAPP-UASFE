@@ -34,6 +34,16 @@
   gap: 1.5rem;
 }
 
+.StatsTotal__body a {
+  transition: transform 0.2s ease;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.StatsTotal__body a:hover {
+  transform: scale(1.1);
+}
+
 /* Medium Screen */
 @media (max-width: 992px) {
   .StatsTotal__body {

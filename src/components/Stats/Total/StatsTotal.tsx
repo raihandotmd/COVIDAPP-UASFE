@@ -39,12 +39,14 @@ const StatsTotal = () => {
         </div>
         <div className={styles.StatsTotal__body}>
           {statsData.indonesia.map((data) => (
-            <StatsCard
-              key={nanoid(2)}
-              status={data.status}
-              colorStats={checkStatus(data.status as typeStatus)}
-              stats={formatNumber(data.total)}
-            />
+            <a href={data.detail} target="_blank">
+              <StatsCard
+                key={nanoid(2)}
+                status={data.status}
+                colorStats={checkStatus(data.status as typeStatus)}
+                stats={formatNumber(data.total)}
+              />
+            </a>
           ))}
         </div>
       </div>
