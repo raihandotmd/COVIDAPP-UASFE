@@ -38,6 +38,9 @@ table.StatsProvince__table th {
   background-color: var(--primary-color);
   color: var(--white-color);
   border-collapse: collapse;
+  position: sticky;
+  top: 0;
+  z-index: 5;
 }
 
 table.StatsProvince__table th,
