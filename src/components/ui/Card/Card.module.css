@@ -6,15 +6,6 @@
   box-shadow: 0 4px 4px rgba(0, 0, 0, 25%);
 }
 
-.StatsTotal__CardTitle {
-  font-weight: var(--medium-weight);
-}
-
-.StatsTotal__CardStats {
-  font-size: 2.5rem;
-  font-weight: var(--medium-weight);
-}
-
 /* Medium Screen */
 @media (max-width: 992px) {
   .StatsTotal__Card {

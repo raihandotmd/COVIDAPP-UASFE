@@ -1,3 +1,4 @@
+import Card from "../../../ui/Card/Card";
 import styles from "./StatsCard.module.css";
 
 type StyleStatsCard = {
@@ -8,7 +9,7 @@ type StyleStatsCard = {
 
 const StatsCard = ({ status, colorStats, stats }: StyleStatsCard) => {
   return (
-    <div className={styles.StatsTotal__Card}>
+    <Card>
       <h4 className={styles.StatsTotal__CardTitle}>{status}</h4>
       <p
         className={styles.StatsTotal__CardStats}
@@ -16,7 +17,7 @@ const StatsCard = ({ status, colorStats, stats }: StyleStatsCard) => {
       >
         {stats}
       </p>
-    </div>
+    </Card>
   );
 };
 

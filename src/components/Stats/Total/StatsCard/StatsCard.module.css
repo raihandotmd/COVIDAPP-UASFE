@@ -1,0 +1,8 @@
+.StatsTotal__CardTitle {
+  font-weight: var(--medium-weight);
+}
+
+.StatsTotal__CardStats {
+  font-size: 2.5rem;
+  font-weight: var(--medium-weight);
+}

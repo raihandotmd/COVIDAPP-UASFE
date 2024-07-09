@@ -1,8 +1,9 @@
 import styles from "./StatsTotal.module.css";
-import StatsCard from "../Card/StatsCard";
+import StatsCard from "./StatsCard/StatsCard.tsx";
 import { StatsData } from "../../../types/data.ts";
 import data from "../../../utils/constants/indonesia.js";
 import { nanoid } from "nanoid";
+import RegionsCard from "../Regions/RegionsCard/RegionsCard.tsx";
 
 type typeStatus = "Positif" | "Sembuh" | "Meninggal";
 function checkStatus(status: typeStatus) {
@@ -38,14 +39,18 @@ const StatsTotal = () => {
           </p>
         </div>
         <div className={styles.StatsTotal__body}>
+          {/* {statsData.indonesia.map((data) => ( */}
+          {/*   <a href={data.detail} target="_blank" key={nanoid(5)}> */}
+          {/*     <StatsCard */}
+          {/*       status={data.status} */}
+          {/*       colorStats={checkStatus(data.status as typeStatus)} */}
+          {/*       stats={formatNumber(data.total)} */}
+          {/*     /> */}
+          {/*   </a> */}
+          {/* ))} */}
           {statsData.indonesia.map((data) => (
-            <a href={data.detail} target="_blank">
-              <StatsCard
-                key={nanoid(2)}
-                status={data.status}
-                colorStats={checkStatus(data.status as typeStatus)}
-                stats={formatNumber(data.total)}
-              />
+            <a href={data.detail} target="_blank" key={nanoid(5)}>
+              <RegionsCard />
             </a>
           ))}
         </div>
