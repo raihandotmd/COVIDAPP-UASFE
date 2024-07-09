@@ -23,3 +23,27 @@ export interface StatsDataProvinces {
   total_province: number;
   provinces: DataProvince[];
 }
+
+export interface Region {
+  type: string;
+  name: string;
+  numbers: {
+    confirmed: number;
+    recovered: number;
+    death: number;
+  };
+}
+
+export interface Global {
+  last_update: string;
+  global: {
+    status: string;
+    total: number;
+  }[];
+  regions: Region[];
+}
+
+export interface SectionGlobalProps {
+  title: string;
+  globalStats: Global;
+}

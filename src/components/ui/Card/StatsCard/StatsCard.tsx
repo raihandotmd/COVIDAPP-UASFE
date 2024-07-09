@@ -1,16 +1,19 @@
-import Card from "../../../ui/Card/Card";
+import { capitalizeFirstLetter } from "../../../../utils/helpers";
+import Card from "../Card";
 import styles from "./StatsCard.module.css";
 
-type StyleStatsCard = {
+interface StyleStatsCard {
   status: string;
   colorStats?: string;
   stats: string;
-};
+}
 
 const StatsCard = ({ status, colorStats, stats }: StyleStatsCard) => {
   return (
     <Card>
-      <h4 className={styles.StatsTotal__CardTitle}>{status}</h4>
+      <h4 className={styles.StatsTotal__CardTitle}>
+        {capitalizeFirstLetter(status)}
+      </h4>
       <p
         className={styles.StatsTotal__CardStats}
         style={{ color: `var(--${colorStats})` }}

@@ -5,7 +5,7 @@ interface CardProps {
 }
 
 const Card = ({ children }: CardProps) => {
-  return <div className={styles.StatsTotal__Card}>{children}</div>;
+  return <div className={styles.Card}>{children}</div>;
 };
 
 export default Card;

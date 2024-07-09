@@ -1,4 +1,4 @@
-.StatsTotal__Card {
+.Card {
   background-color: var(--white-color);
   padding: 4rem;
   text-align: center;
@@ -8,7 +8,7 @@
 
 /* Medium Screen */
 @media (max-width: 992px) {
-  .StatsTotal__Card {
+  .Card {
     width: 100%;
   }
 }

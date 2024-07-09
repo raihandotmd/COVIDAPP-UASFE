@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar/Navbar.tsx";
-import Home from "./types/pages/Home.tsx";
+import Home from "./pages/Home.tsx";
 import Footer from "./components/Footer/Footer.tsx";
 import { CovidDataProvider } from "./contexts/DataCovidProvider.tsx";
 
