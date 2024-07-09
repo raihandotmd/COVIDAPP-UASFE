@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Hero from "../components/Hero/Hero";
 import StatsRegions from "../components/Stats/Regions/StatsRegions";
 import StatsSituation from "../components/Stats/Total/StatsSituation";
-import { Global } from "../types/data";
+import { Global } from "../utils/types";
 import axios from "axios";
 
 const Home = () => {

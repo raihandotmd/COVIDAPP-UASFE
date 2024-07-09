@@ -1,8 +1,9 @@
 import styles from "./StatsSituation.module.css";
 import StatsCard from "../../ui/Card/StatsCard/StatsCard.tsx";
-import {  SectionGlobalProps } from "../../../types/data.ts";
+import { SectionGlobalProps } from "../../../utils/types.ts";
 import { nanoid } from "nanoid";
 import { formatNumber } from "../../../utils/helpers.ts";
+import Section from "../../ui/Section/Section.tsx";
 
 type typeStatus = "confirmed" | "recovered" | "death";
 function checkStatus(status: typeStatus) {
@@ -18,30 +19,25 @@ function checkStatus(status: typeStatus) {
   }
 }
 
-
-const StatsSituation = ({ title, globalStats }: SectionGlobalProps) => {
+const StatsSituation = ({ globalStats }: SectionGlobalProps) => {
   return (
-    <div className={styles.StatsTotal}>
-      <div className={styles.StatsTotal__container}>
-        <div className={styles.StatsTotal__header}>
-          <h1 className={styles.StatsTotal__title}>{title} Situation</h1>
-          <p className={styles.StatsTotal__subtitle}>
-            Data Covid Berdasarkan {title}
-          </p>
-        </div>
-        <div className={styles.StatsTotal__body}>
-          {globalStats?.global.map((data) => (
-            <span key={nanoid(5)}>
-              <StatsCard
-                status={data.status}
-                colorStats={checkStatus(data.status as typeStatus)}
-                stats={formatNumber(data.total)}
-              />
-            </span>
-          ))}
-        </div>
+    <Section
+      title="Global Situation"
+      subtitle="Data Covid Berdasarkan Global"
+      bgColor="bglight"
+    >
+      <div className={styles.StatsTotal__body}>
+        {globalStats?.global.map((data) => (
+          <span key={nanoid(5)}>
+            <StatsCard
+              status={data.status}
+              colorStats={checkStatus(data.status as typeStatus)}
+              stats={formatNumber(data.total)}
+            />
+          </span>
+        ))}
       </div>
-    </div>
+    </Section>
   );
 };
 
