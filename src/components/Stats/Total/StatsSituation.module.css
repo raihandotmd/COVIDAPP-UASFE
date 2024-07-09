@@ -1,55 +1,24 @@
-/* Default Screen */
-.StatsTotal {
-  background-color: var(--bglight-color);
-  height: 100vh;
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.StatsTotal__container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-.StatsTotal__header {
-  margin-bottom: 2rem;
-}
-
-.StatsTotal__title {
-  font-weight: var(--medium-weight);
-}
-
-.StatsTotal__subtitle {
-  font-weight: var(--regular-weight);
-  color: var(--sec-color);
-}
-
-.StatsTotal__body {
+.StatsSituation__body {
   display: flex;
   gap: 1.5rem;
+
+  align-content: center;
+  justify-content: center;
 }
 
-.StatsTotal__body span {
+.StatsSituation__body span {
   transition: transform 0.2s ease;
   color: var(--primary-color);
   text-decoration: none;
 }
 
-.StatsTotal__body span:hover {
+.StatsSituation__body span:hover {
   transform: scale(1.05);
 }
 
 /* Medium Screen */
 @media (max-width: 992px) {
-  .StatsTotal {
-    height: 100%;
-  }
-  .StatsTotal__body {
+  .StatsSituation__body {
     flex-direction: column;
     width: 80%;
     min-width: 320px;

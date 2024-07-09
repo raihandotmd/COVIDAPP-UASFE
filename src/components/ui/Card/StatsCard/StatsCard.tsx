@@ -6,20 +6,26 @@ interface StyleStatsCard {
   status: string;
   colorStats?: string;
   stats: string;
+  icon: React.ReactNode;
 }
 
-const StatsCard = ({ status, colorStats, stats }: StyleStatsCard) => {
+const StatsCard = ({ status, colorStats, stats, icon }: StyleStatsCard) => {
   return (
     <Card>
-      <h4 className={styles.StatsTotal__CardTitle}>
-        {capitalizeFirstLetter(status)}
-      </h4>
-      <p
-        className={styles.StatsTotal__CardStats}
-        style={{ color: `var(--${colorStats})` }}
-      >
-        {stats}
-      </p>
+      <div className={styles.StatsCard}>
+        <div className={styles.StatsCard__header}>
+          {icon}
+          <h4 className={styles.StatsCard__title}>
+            {capitalizeFirstLetter(status)}
+          </h4>
+        </div>
+        <p
+          className={styles.StatsCard__data}
+          style={{ color: `var(--${colorStats})` }}
+        >
+          {stats}
+        </p>
+      </div>
     </Card>
   );
 };
