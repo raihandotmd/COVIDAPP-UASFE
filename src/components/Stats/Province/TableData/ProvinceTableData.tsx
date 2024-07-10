@@ -1,20 +1,22 @@
-import React from "react";
-import { DataProvince } from "../../../../types/data.ts";
+import { formatNumber } from "../../../../utils/helpers";
+import { IndonesiaRegion } from "../../../../utils/types";
 
-const ProvinceTableData: React.FC<DataProvince> = (data) => {
-  // Destructure directly from the prop
-  const { no, kota, sembuh, meninggal, dirawat, kasus } = data;
+interface ProvTableDataProps {
+  regions: IndonesiaRegion;
+  no: number;
+}
 
+const ProvinceTableData = ({ regions, no }: ProvTableDataProps) => {
   return (
     <tr>
       <td>
         <b>{no}</b>
       </td>
-      <td>{kota}</td>
-      <td>{kasus}</td>
-      <td>{sembuh}</td>
-      <td>{dirawat}</td>
-      <td>{meninggal}</td>
+      <td>{regions.name}</td>
+      <td>{formatNumber(regions.numbers.confirmed)}</td>
+      <td>{formatNumber(regions.numbers.recovered)}</td>
+      <td>{formatNumber(regions.numbers.treatment)}</td>
+      <td>{formatNumber(regions.numbers.death)}</td>
     </tr>
   );
 };

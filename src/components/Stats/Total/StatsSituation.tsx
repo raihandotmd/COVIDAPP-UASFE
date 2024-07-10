@@ -1,20 +1,21 @@
-import styles from "./StatsSituation.module.css";
-import StatsCard from "../../ui/Card/StatsCard/StatsCard.tsx";
-import { SectionGlobalProps } from "../../../utils/types.ts";
+import React from "react";
 import { nanoid } from "nanoid";
-import { formatNumber } from "../../../utils/helpers.ts";
-import Section from "../../ui/Section/Section.tsx";
+import styles from "./StatsSituation.module.css";
+import StatsCard from "../../ui/Card/StatsCard/StatsCard";
+import { StatEntry, Status } from "../../../utils/types";
+import { formatNumber } from "../../../utils/helpers";
+import Section from "../../ui/Section/Section";
 import { PiFaceMask, PiSkull } from "react-icons/pi";
 import { BiHappyBeaming } from "react-icons/bi";
 
-type typeStatus = "confirmed" | "recovered" | "death";
 const size = 75;
 const icons = {
   confirmed: <PiFaceMask size={size} />,
   recovered: <BiHappyBeaming size={size} color={`var(--sec-color)`} />,
   death: <PiSkull size={size} color={`var(--danger-color)`} />,
 };
-function checkStatus(status: typeStatus) {
+
+function checkStatus(status: Status) {
   switch (status) {
     case "confirmed":
       return "gray-color";
@@ -27,34 +28,27 @@ function checkStatus(status: typeStatus) {
   }
 }
 
-function checkIconsStatus(status: typeStatus) {
-  switch (status) {
-    case "confirmed":
-      return icons.confirmed;
-    case "recovered":
-      return icons.recovered;
-    case "death":
-      return icons.death;
-    default:
-      return icons.recovered;
-  }
+function checkIconsStatus(status: Status) {
+  return icons[status] || icons.recovered;
 }
 
-const StatsSituation = ({ globalStats }: SectionGlobalProps) => {
+interface StatsSituationProps {
+  title: string;
+  subtitle: string;
+  stats: StatEntry[];
+}
+
+const StatsSituation = ({ title, subtitle, stats }: StatsSituationProps) => {
   return (
-    <Section
-      title="Global Situation"
-      subtitle="Data Covid Berdasarkan Global"
-      bgColor="bglight"
-    >
+    <Section title={title} subtitle={subtitle} bgColor="bglight">
       <div className={styles.StatsSituation__body}>
-        {globalStats?.global.map((data) => (
+        {stats.map((data) => (
           <span key={nanoid(5)}>
             <StatsCard
               status={data.status}
-              colorStats={checkStatus(data.status as typeStatus)}
+              colorStats={checkStatus(data.status)}
               stats={formatNumber(data.total)}
-              icon={checkIconsStatus(data.status as typeStatus)}
+              icon={checkIconsStatus(data.status)}
             />
           </span>
         ))}

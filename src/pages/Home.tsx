@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import Hero from "../components/Hero/Hero";
 import StatsRegions from "../components/Stats/Regions/StatsRegions";
 import StatsSituation from "../components/Stats/Total/StatsSituation";
-import { Global } from "../utils/types";
+import { GlobalData } from "../utils/types";
 import axios from "axios";
 
 const Home = () => {
-  const [globalStats, setGlobalStats] = useState<Global>();
+  const [globalStats, setGlobalStats] = useState<GlobalData>();
 
   useEffect(() => {
     async function fetchGlobalData() {
@@ -23,8 +23,16 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <StatsSituation title="Global" globalStats={globalStats as Global} />
-      <StatsRegions title="Regions" globalStats={globalStats as Global} />
+      {globalStats?.global ? (
+        <StatsSituation
+          title="Global Situation"
+          subtitle="Data Covid Berdasarkan Global"
+          stats={globalStats.global}
+        />
+      ) : (
+        <p>Loading...</p>
+      )}
+      <StatsRegions title="Regions" globalStats={globalStats as GlobalData} />
     </>
   );
 };

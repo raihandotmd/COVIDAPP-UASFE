@@ -1,19 +1,20 @@
 import styles from "./StatsProvinces.module.css";
 import ProvinceTableData from "./TableData/ProvinceTableData";
 import { nanoid } from "nanoid";
-import { useCovidDataCtx } from "../../../contexts/DataCovidProvider";
-import { DataProvince } from "../../../types/data";
+import Section from "../../ui/Section/Section";
+import { IndonesiaRegion } from "../../../utils/types";
 
-const StatsProvinces = () => {
-  const { dataCovid, setDataCovid } = useCovidDataCtx();
+interface StatsProvincesProps {
+  regions: IndonesiaRegion[];
+}
+
+const StatsProvinces: React.FC<StatsProvincesProps> = ({ regions }) => {
   return (
-    <div id="provinces" className={styles.StatsProvince}>
-      <div className={styles.StatsProvince__header}>
-        <h1 className={styles.StatsProvince__title}>Provinsi</h1>
-        <p className={styles.StatsProvince__subtitle}>
-          Data Covid Berdasarkan Indonesia
-        </p>
-      </div>
+    <Section
+      title="Situation By Provinces"
+      subtitle="Data Covid Berdasarkan Provinsi"
+      bgColor="light"
+    >
       <div className={styles.StatsProvince__tableContainer}>
         <table className={styles.StatsProvince__table}>
           <thead>
@@ -27,13 +28,17 @@ const StatsProvinces = () => {
             </tr>
           </thead>
           <tbody>
-            {dataCovid.provinces.map((data: DataProvince, index: number) => (
-              <ProvinceTableData key={nanoid(5)} no={index + 1} {...data} />
+            {regions.map((data, index: number) => (
+              <ProvinceTableData
+                key={nanoid(5)}
+                no={index + 1}
+                regions={data}
+              />
             ))}
           </tbody>
         </table>
       </div>
-    </div>
+    </Section>
   );
 };
 

@@ -1,14 +1,18 @@
-import Navbar from "./components/Navbar/Navbar.tsx";
 import Home from "./pages/Home.tsx";
-import Footer from "./components/Footer/Footer.tsx";
 import { CovidDataProvider } from "./contexts/DataCovidProvider.tsx";
+import Layout from "./layouts/index.tsx";
+import { Routes, Route } from "react-router-dom";
+import Indonesia from "./pages/Indonesia.tsx";
 
 function App() {
   return (
     <CovidDataProvider>
-      <Navbar />
-      <Home />
-      <Footer />
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/indonesia" element={<Indonesia />} />
+        </Routes>
+      </Layout>
     </CovidDataProvider>
   );
 }
