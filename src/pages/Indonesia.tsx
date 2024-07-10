@@ -4,15 +4,14 @@ import axios from "axios";
 import { IndonesiaData } from "../utils/types";
 import StatsSituation from "../components/Stats/Total/StatsSituation";
 import StatsProvinces from "../components/Stats/Province/StatsProvinces";
+import ENDPOINTS from "../utils/constants/endpoints";
 
 const Indonesia = () => {
   const [indoStats, setIndoStats] = useState<IndonesiaData>();
 
   useEffect(() => {
     async function fetchIndoData() {
-      const res = await axios(
-        "https://covid-fe-2023.vercel.app/api/indonesia.json",
-      );
+      const res = await axios(ENDPOINTS.INDONESIA);
 
       setIndoStats(res.data);
     }
