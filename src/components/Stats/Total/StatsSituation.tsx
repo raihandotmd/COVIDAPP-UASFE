@@ -1,4 +1,3 @@
-import React from "react";
 import { nanoid } from "nanoid";
 import styles from "./StatsSituation.module.css";
 import StatsCard from "../../ui/Card/StatsCard/StatsCard";
@@ -8,8 +7,15 @@ import Section from "../../ui/Section/Section";
 import { PiFaceMask, PiSkull } from "react-icons/pi";
 import { BiHappyBeaming } from "react-icons/bi";
 
+interface Icons {
+  confirmed: JSX.Element;
+  recovered: JSX.Element;
+  death: JSX.Element;
+}
+
 const size = 75;
-const icons = {
+
+const icons: Icons = {
   confirmed: <PiFaceMask size={size} />,
   recovered: <BiHappyBeaming size={size} color={`var(--sec-color)`} />,
   death: <PiSkull size={size} color={`var(--danger-color)`} />,
@@ -28,8 +34,8 @@ function checkStatus(status: Status) {
   }
 }
 
-function checkIconsStatus(status: Status) {
-  return icons[status] || icons.recovered;
+function checkIconsStatus(status: string): JSX.Element {
+  return icons[status as keyof Icons];
 }
 
 interface StatsSituationProps {

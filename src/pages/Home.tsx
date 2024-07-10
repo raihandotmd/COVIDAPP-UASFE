@@ -22,16 +22,19 @@ const Home = () => {
   return (
     <>
       <Hero />
-      {globalStats?.global ? (
-        <StatsSituation
-          title="Global Situation"
-          subtitle="Data Covid Berdasarkan Global"
-          stats={globalStats.global}
-        />
+      {globalStats ? (
+        <>
+          <StatsSituation
+            title="Global Situation"
+            subtitle="Data Covid Berdasarkan Global"
+            stats={globalStats.global}
+          />
+
+          <StatsRegions stats={globalStats.regions} />
+        </>
       ) : (
         <p>Loading...</p>
       )}
-      <StatsRegions title="Regions" globalStats={globalStats as GlobalData} />
     </>
   );
 };

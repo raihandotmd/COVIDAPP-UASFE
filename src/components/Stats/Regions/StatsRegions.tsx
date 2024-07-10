@@ -1,10 +1,14 @@
 import RegionsCard from "../../ui/Card/RegionsCard/RegionsCard";
 import styles from "./StatsRegions.module.css";
-import { Region, SectionGlobalProps } from "../../../utils/types";
 import { nanoid } from "nanoid";
 import Section from "../../ui/Section/Section";
+import { GlobalRegion } from "../../../utils/types";
 
-const StatsRegions = ({ globalStats }: SectionGlobalProps) => {
+interface StatsRegionProps {
+  stats: GlobalRegion[];
+}
+
+const StatsRegions = ({ stats }: StatsRegionProps) => {
   return (
     <Section
       title="Situation By Regions"
@@ -12,7 +16,7 @@ const StatsRegions = ({ globalStats }: SectionGlobalProps) => {
       bgColor="light"
     >
       <div className={styles.StatsRegions__body}>
-        {globalStats?.regions.map((data: Region) => (
+        {stats?.map((data: GlobalRegion) => (
           <span key={nanoid(5)}>
             <RegionsCard region={data.name} numbers={data.numbers} />
           </span>
