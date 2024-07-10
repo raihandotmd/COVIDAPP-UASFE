@@ -3,13 +3,15 @@ import formImage from "../../assets/images/form.png";
 import { useState, ChangeEvent } from "react";
 import { nanoid } from "nanoid";
 import { useCovidDataCtx } from "../../contexts/DataCovidProvider.tsx";
-import { DataProvince } from "../../types/data.ts";
+import { DataProvince } from "../../utils/types.ts";
 
 type status = "sembuh" | "meninggal" | "dirawat";
 
-const Form = () => {
+const FormProvince = () => {
   const { dataCovid, setDataCovid } = useCovidDataCtx();
-  const [selectedKotaValue, setSelectedKotaValue] = useState("Jakarta");
+  const [selectedKotaValue, setSelectedKotaValue] = useState(
+    dataCovid.provinces[0].kota,
+  );
   const [selectedStatusValue, setSelectedStatusValue] =
     useState<status>("sembuh");
   const [inputValue, setInputValue] = useState("");
@@ -25,12 +27,6 @@ const Form = () => {
   };
   const handleSubmit = (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    console.log(
-      "Submitted value:",
-      inputValue,
-      selectedKotaValue,
-      selectedStatusValue,
-    );
 
     const updatedProvinces = dataCovid.provinces.map(
       (province: DataProvince) => {
@@ -46,12 +42,10 @@ const Form = () => {
       },
     );
 
-    setDataCovid((prevState: DataProvince[]) => ({
+    setDataCovid((prevState) => ({
       ...prevState,
-      provinces: updatedProvinces as DataProvince[],
+      provinces: updatedProvinces,
     }));
-
-    console.log(dataCovid); // This will now show the updated data
   };
   return (
     <div id="form" className={styles.form}>
@@ -112,4 +106,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default FormProvince;

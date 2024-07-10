@@ -11,7 +11,7 @@ const Navbar = () => {
       </div>
       <ul className={styles.navbar__list}>
         <li className={styles.navbar__item}>
-          <a href="#about">About</a>
+          <Link to="/about">About</Link>
         </li>
         <li className={styles.navbar__item}>
           <Link className={styles.navbar__brand} to="/">
@@ -22,7 +22,7 @@ const Navbar = () => {
           <Link to="/indonesia">Indonesia</Link>
         </li>
         <li className={styles.navbar__item}>
-          <a href="#form">Province</a>
+          <Link to="/province">Province</Link>
         </li>
       </ul>
     </nav>

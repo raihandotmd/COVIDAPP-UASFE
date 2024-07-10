@@ -1,3 +1,5 @@
+import { StatsDataProvinces } from "../types";
+
 const data = {
   last_update: "2024-04-01",
   total_province: 34,
@@ -243,4 +245,4 @@ const data = {
   ],
 };
 
-export default data;
+export default data as StatsDataProvinces;

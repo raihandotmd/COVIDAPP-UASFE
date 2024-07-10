@@ -2,18 +2,24 @@ import styles from "./StatsProvinces.module.css";
 import ProvinceTableData from "./TableData/ProvinceTableData";
 import { nanoid } from "nanoid";
 import Section from "../../ui/Section/Section";
-import { IndonesiaRegion } from "../../../utils/types";
+import { DataProvince, IndonesiaRegion } from "../../../utils/types";
+import { useCovidDataCtx } from "../../../contexts/DataCovidProvider";
 
 interface StatsProvincesProps {
-  regions: IndonesiaRegion[];
+  regions?: IndonesiaRegion[] | DataProvince[];
 }
 
 const StatsProvinces: React.FC<StatsProvincesProps> = ({ regions }) => {
+  const { dataCovid } = useCovidDataCtx();
+
+  if (regions === undefined) {
+    regions = dataCovid.provinces;
+  }
   return (
     <Section
       title="Situation By Provinces"
       subtitle="Data Covid Berdasarkan Provinsi"
-      bgColor="light"
+      bgColor="bglight"
     >
       <div className={styles.StatsProvince__tableContainer}>
         <table className={styles.StatsProvince__table}>
