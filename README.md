@@ -46,31 +46,52 @@ src
 │   ├── Navbar
 │   │   ├── Navbar.module.css
 │   │   └── Navbar.tsx
-│   └── Stats
+│   ├── Stats
+│   │   ├── Province
+│   │   │   ├── StatsProvinces.module.css
+│   │   │   ├── StatsProvinces.tsx
+│   │   │   └── TableData
+│   │   │       └── ProvinceTableData.tsx
+│   │   ├── Regions
+│   │   │   ├── StatsRegions.module.css
+│   │   │   └── StatsRegions.tsx
+│   │   └── Total
+│   │       ├── StatsSituation.module.css
+│   │       └── StatsSituation.tsx
+│   └── ui
 │       ├── Card
-│       │   ├── StatsCard.module.css
-│       │   └── StatsCard.tsx
-│       ├── Province
-│       │   ├── StatsProvinces.module.css
-│       │   ├── StatsProvinces.tsx
-│       │   └── TableData
-│       │       └── ProvinceTableData.tsx
-│       └── Total
-│           ├── StatsTotal.module.css
-│           └── StatsTotal.tsx
+│       │   ├── Card.module.css
+│       │   ├── Card.tsx
+│       │   ├── RegionsCard
+│       │   │   ├── Regions.module.css
+│       │   │   └── RegionsCard.tsx
+│       │   └── StatsCard
+│       │       ├── StatsCard.module.css
+│       │       └── StatsCard.tsx
+│       └── Section
+│           ├── Section.module.css
+│           └── Section.tsx
 ├── contexts
 │   └── DataCovidProvider.tsx
 ├── index.css
+├── layouts
+│   └── index.tsx
 ├── main.tsx
-├── types
-│   ├── data.ts
-│   └── pages
-│       └── Home.tsx
+├── pages
+│   ├── About.tsx
+│   ├── Home.tsx
+│   ├── Indonesia.tsx
+│   └── Province.tsx
 ├── utils
-│   └── constants
-│       ├── indonesia.ts
-│       └── provinces.ts
+│   ├── constants
+│   │   ├── endpoints.ts
+│   │   ├── indonesia.ts
+│   │   └── provinces.ts
+│   ├── helpers.ts
+│   └── types.ts
 └── vite-env.d.ts
+
+23 directories, 40 files
 ```
 
 ### Component Structure
