@@ -5,7 +5,7 @@ export function capitalizeFirstLetter(str: string): string {
 // Untuk format nomor agar memiliki decimal
 export function formatNumber(number: number): string {
   // Use toLocaleString for formatting
-  return number.toLocaleString("en-US", {
+  return number.toLocaleString("id-ID", {
     style: "decimal",
   });
 }
